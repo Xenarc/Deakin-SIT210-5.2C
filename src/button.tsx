@@ -28,21 +28,22 @@ const Btn = styled.button`
 
 function Button(props: {
     onClick?:Function,
-    ondblclick?:Function,
+    onRightClick?:Function,
     colour?:string, 
     accentColour?:string,
     children?:React.ReactNode,
     selected:boolean,
-    setSelected:Function
+    setSelected?:Function
   }) {
   
   return (
     <Btn
       onContextMenu={(e:any) => {
         e.preventDefault();
-        props.ondblclick && props.ondblclick()
+        props.onRightClick && props.onRightClick()
       }}
       onClick={() => {
+        if(!props.setSelected) return;
         props.setSelected(!props.selected);
         props.onClick && props.onClick()
       }}

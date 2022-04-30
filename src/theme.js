@@ -9,6 +9,7 @@ const theme = {
   info: "#0695c3",
   warning: "#ffc107",
   danger: "#dc3545",
+  muted: "#303030",
 }
 
 export default theme;
