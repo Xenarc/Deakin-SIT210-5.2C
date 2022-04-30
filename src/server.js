@@ -1,9 +1,9 @@
 const express = require("express");
 const Gpio = require('onoff').Gpio;
 
-const Red = new Gpio(17, 'out');
-const Green = new Gpio(18, 'out');
-const Blue = new Gpio(19, 'out');
+const Red = new Gpio(16, 'out');
+const Green = new Gpio(20, 'out');
+const Blue = new Gpio(21, 'out');
 
 const app = express();
 
