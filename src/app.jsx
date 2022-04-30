@@ -21,7 +21,7 @@ const Radio = styled.button`
   position: relative;
   transition: all 0.1s ease-in-out;
   &:hover{
-    color: ${(props) => props.selected ? theme.primaryAccent : theme.foregroundAccent};
+    color: ${(props) => props.selected ? theme.foregroundAccent : theme.foregroundAccent};
     &:after{
       background-color: ${(props) => !props.selected && theme.backgroundAccent};
       border: 2px solid ${theme.primaryAccent};
@@ -48,7 +48,7 @@ function App() {
   const [selectedRadio, setSelectedRadio] = React.useState("Red");
   
   React.useEffect(() => {
-    
+    fetch(`https://localhost:3005/${selectedRadio.toLowerCase()}/1`).then(response => console.log(response))
   }, [selectedRadio]);
   
   return (

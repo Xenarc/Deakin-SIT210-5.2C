@@ -6,6 +6,9 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16",
+    "onoff": "^6.0.3",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-radio-buttons": "^1.2.2",
@@ -15,12 +18,12 @@
   },
   "main": "public/electron.js",
   "scripts": {
-    "start": "set PORT=3006 && react-scripts start",
+    "start": "concurrently --kill-others \"nodemon ./src/server.js\" \"set PORT=3006 && react-scripts start\" ",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "electron": "set PORT=3006 && wait-on tcp:3080 && electron .",
-    "dev": "concurrently --kill-others \"set PORT=3006 && react-scripts start\" \"wait-on tcp:3006 && electron .\""
+    "dev": "concurrently --kill-others \"nodemon ./src/app.js\" \"set PORT=3006 && react-scripts start\" \"wait-on tcp:3006 && electron .\""
   },
   "eslintConfig": {
     "extends": [
