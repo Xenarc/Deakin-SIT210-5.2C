@@ -24,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "electron": "set PORT=3006 && wait-on tcp:3080 && electron .",
-    "dev": "concurrently --kill-others \"nodemon ./src/app.js\" \"set PORT=3006 && react-scripts start\" \"wait-on tcp:3006 && electron .\""
+    "dev": "concurrently --kill-others \"nodemon ./src/server.js\" \"set PORT=3006 && react-scripts start\" \"wait-on tcp:3006 && electron .\""
   },
   "eslintConfig": {
     "extends": [
