@@ -1,8 +1,8 @@
 const express = require("express");
 const Gpio = require('onoff').Gpio;
 
-const Red = new Gpio(16, 'out');
-const Green = new Gpio(20, 'out');
+const Red = new Gpio(20, 'out');
+const Green = new Gpio(16, 'out');
 const Blue = new Gpio(21, 'out');
 
 const app = express();
@@ -21,9 +21,12 @@ function resetAllLEDStates() {
 }
 
 function updateLEDStates(){
-  if(LEDStates.red) Red.writeSync(true);
-  if(LEDStates.green) Green.writeSync(true);
-  if(LEDStates.blue) Blue.writeSync(true);
+  if(LEDStates.red) Red.writeSync(1);
+  else Red.writeSync(0);
+  if(LEDStates.green) Green.writeSync(1);
+  else Green.writeSync(0);
+  if(LEDStates.blue) Blue.writeSync(1);
+  else Blue.writeSync(0);
 }
 
 
