@@ -19,6 +19,7 @@
   "main": "public/electron.js",
   "scripts": {
     "start": "concurrently --kill-others \"nodemon ./src/server.js\" \"set PORT=3006 && react-scripts start\" ",
+    "server": "nodemon ./src/server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

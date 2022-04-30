@@ -28,38 +28,44 @@ function updateLEDStates(){
 
 
 app.get("/LED/red/1", () => {
-  LEDStates.red = true;
   resetAllLEDStates();
+  console.log("/LED/red/1");
+  LEDStates.red = true;
   updateLEDStates()
 });
 
 app.get("/LED/red/0", () => {
-  LEDStates.red = true;
   resetAllLEDStates();
+  console.log("/LED/red/0");
+  LEDStates.red = true;
   updateLEDStates()
 });
 
 app.get("/LED/green/1", () => {
-  LEDStates.green = true;
   resetAllLEDStates();
+  console.log("/LED/green/1");
+  LEDStates.green = true;
   updateLEDStates()
 });
 
 app.get("/LED/green/0", () => {
-  LEDStates.green = true;
   resetAllLEDStates();
+  console.log("/LED/green/0");
+  LEDStates.green = true;
   updateLEDStates()
 });
 
 app.get("/LED/blue/1", () => {
-  LEDStates.blue = true;
   resetAllLEDStates();
+  console.log("/LED/blue/1");
+  LEDStates.blue = true;
   updateLEDStates()
 });
 
 app.get("/LED/blue/0", () => {
-  LEDStates.blue = true;
   resetAllLEDStates();
+  console.log("/LED/blue/0");
+  LEDStates.blue = true;
   updateLEDStates()
 });
 
