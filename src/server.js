@@ -27,46 +27,52 @@ function updateLEDStates(){
 }
 
 
-app.get("/LED/red/1", () => {
+app.get("/LED/red/1", (req, res) => {
   resetAllLEDStates();
   console.log("/LED/red/1");
   LEDStates.red = true;
-  updateLEDStates()
+  updateLEDStates();
+  return res.sendStatus(200);
 });
 
-app.get("/LED/red/0", () => {
+app.get("/LED/red/0", (req, res) => {
   resetAllLEDStates();
   console.log("/LED/red/0");
   LEDStates.red = true;
-  updateLEDStates()
+  updateLEDStates();
+  return res.sendStatus(200);
 });
 
-app.get("/LED/green/1", () => {
+app.get("/LED/green/1", (req, res) => {
   resetAllLEDStates();
   console.log("/LED/green/1");
   LEDStates.green = true;
-  updateLEDStates()
+  updateLEDStates();
+  return res.sendStatus(200);
 });
 
-app.get("/LED/green/0", () => {
+app.get("/LED/green/0", (req, res) => {
   resetAllLEDStates();
   console.log("/LED/green/0");
   LEDStates.green = true;
-  updateLEDStates()
+  updateLEDStates();
+  return res.sendStatus(200);
 });
 
-app.get("/LED/blue/1", () => {
+app.get("/LED/blue/1", (req, res) => {
   resetAllLEDStates();
   console.log("/LED/blue/1");
   LEDStates.blue = true;
-  updateLEDStates()
+  updateLEDStates();
+  return res.sendStatus(200);
 });
 
-app.get("/LED/blue/0", () => {
+app.get("/LED/blue/0", (req, res) => {
   resetAllLEDStates();
   console.log("/LED/blue/0");
   LEDStates.blue = true;
-  updateLEDStates()
+  updateLEDStates();
+  return res.sendStatus(200);
 });
 
 
