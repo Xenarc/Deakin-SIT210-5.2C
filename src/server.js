@@ -84,6 +84,12 @@ const PORT = 3005;
 app.listen(PORT, console.log(`Server started on port ${PORT}`));
 
 process.on('SIGINT', () => {
+  // Reset LED states
+  resetAllLEDStates();
+  
+  // Update GPIO's
+  updateLEDStates();
+  
   // Cleanup
   Red.unexport();
   Green.unexport();
