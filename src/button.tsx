@@ -43,9 +43,11 @@ function Button(props: {
         props.onRightClick && props.onRightClick()
       }}
       onClick={() => {
+        if(!props.onClick) return;
+        props.onClick();
+        
         if(!props.setSelected) return;
         props.setSelected(!props.selected);
-        props.onClick && props.onClick()
       }}
       colour={props.colour}
       accentColour={props.accentColour}

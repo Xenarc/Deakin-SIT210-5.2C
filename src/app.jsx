@@ -64,8 +64,11 @@ function App() {
           </Radio>
         ))}
       </RadioGroup>
-      <Button accentColour={theme.primary}>
-        Click me!
+      <Button accentColour={theme.danger} onClick={() => {
+        console.log("CLOSE");
+        window.close();
+      }}>
+        Close
       </Button>
     </div>
   );
