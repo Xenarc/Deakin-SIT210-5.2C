@@ -48,7 +48,7 @@ function App() {
   const [selectedRadio, setSelectedRadio] = React.useState("Red");
   
   React.useEffect(() => {
-    fetch(`https://localhost:3005/${selectedRadio.toLowerCase()}/1`).then(response => console.log(response))
+    fetch(`http://localhost:3005/LED/${selectedRadio.toLowerCase()}/1`).then(response => console.log(response))
   }, [selectedRadio]);
   
   return (

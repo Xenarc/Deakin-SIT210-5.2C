@@ -18,12 +18,12 @@
   },
   "main": "public/electron.js",
   "scripts": {
-    "start": "concurrently --kill-others \"nodemon ./src/server.js\" \"set PORT=3006 && react-scripts start\" ",
+    "start": "concurrently --kill-others \"nodemon ./src/server.js\" \"react-scripts start\" ",
     "server": "nodemon ./src/server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron": "set PORT=3006 && wait-on tcp:3080 && electron .",
+    "electron": "PORT=3006 wait-on tcp:3080 && electron .",
     "dev": "concurrently --kill-others \"nodemon ./src/server.js\" \"set PORT=3006 && react-scripts start\" \"wait-on tcp:3006 && electron .\""
   },
   "eslintConfig": {
